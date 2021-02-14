@@ -17,7 +17,7 @@ def load_custom_data():
     x = pickle.load(open("/content/drive/MyDrive/data/feature_matrix.pkl", "rb"))
     # y = np.array(y, dtype=int)
     x = np.array(x, dtype=float)
-    y = np.zeros(x.shape)
+    y = np.ones(x.shape)
     mean = x.mean(0)
     std = x.std(0)
     x = (x - mean) / std
