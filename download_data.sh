@@ -1,5 +1,4 @@
 #!/bin/bash
-cd $HHC_HOME
 mkdir data
 for dataset in zoo iris glass; do
   mkdir data/$dataset
