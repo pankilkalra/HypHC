@@ -14,17 +14,18 @@ UCI_DATASETS = [
 
 
 def load_custom_data():
-    x = pickle.load(open("/content/drive/MyDrive/data/feature_matrix.pkl", "rb"))
-    # y = np.array(y, dtype=int)
+    x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "feature_matrix.pkl"), "rb"))
     x = np.array(x, dtype=float)
-    y = np.array([i % 5 for i in range(1000)])
+    y = np.array([i % 5 for i in range(x.shape[0])], dtype=int)
     mean = x.mean(0)
+    mean = mean + 0.00000001
     std = x.std(0)
+    print(mean, std)
     x = (x - mean) / std
     return x, y
 
 
-def load_data(dataset, normalize=True):
+def load_data(dataset, normalize=False):
     """Load dataset.
 
     @param dataset: dataset name
@@ -34,6 +35,7 @@ def load_data(dataset, normalize=True):
     @return: feature vectors, labels, and pairwise similarities computed with cosine similarity
     @rtype: Tuple[np.array, np.array, np.array]
     """
+    normalize = False
     if dataset in UCI_DATASETS:
         if dataset != "custom":
             x, y = load_uci_data(dataset)
@@ -41,6 +43,10 @@ def load_data(dataset, normalize=True):
             x, y = load_custom_data()
     else:
         raise NotImplementedError("Unknown dataset {}.".format(dataset))
+    print(x.shape)
+    print(y.shape)
+    print(x)
+    print(y)
     if normalize:
         x = x / np.linalg.norm(x, axis=1, keepdims=True)
     x0 = x[None, :, :]
@@ -75,7 +81,6 @@ def load_uci_data(dataset):
     with open(data_path, 'r') as f:
         for line in f:
             split_line = line.split(",")
-            print(split_line)
             if len(split_line) >= end_idx - start_idx + 1:
                 x.append([float(x) for x in split_line[start_idx:end_idx]])
                 label = split_line[label_idx]
