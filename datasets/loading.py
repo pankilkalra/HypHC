@@ -20,7 +20,7 @@ def load_custom_data():
     y = np.zeros((x.shape[0], 1))
     mean = x.mean(0)
     mean = mean + 0.00000001
-    std = x.std(0)
+    std = x.std(0) + 0.0000001
     x = (x - mean) / std
     return x, y
 
