@@ -40,7 +40,7 @@ if __name__ == "__main__":
     with open("leave_embeddings.pkl", "wb") as f:
         pickle.dump(leaves_embeddings, f)
     leaves_embeddings = project(leaves_embeddings).detach().cpu().numpy()
-    with open("leave_embeddings.pkl", "wb") as f:
+    with open("leave_embeddings_projected.pkl", "wb") as f:
         pickle.dump(leaves_embeddings, f)
     print(leaves_embeddings.shape)
     fig = plt.figure(figsize=(5, 5))
