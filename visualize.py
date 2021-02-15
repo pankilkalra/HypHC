@@ -11,6 +11,7 @@ from datasets.loading import load_data
 from model.hyphc import HypHC
 from utils.poincare import project
 from utils.visualization import plot_tree_from_leaves
+import pickle
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser("Hyperbolic Hierarchical Clustering.")
@@ -36,7 +37,11 @@ if __name__ == "__main__":
     tree = model.decode_tree(fast_decoding=True)
     leaves_embeddings = model.normalize_embeddings(model.embeddings.weight.data)
     print(leaves_embeddings.shape)
+    with open("leave_embeddings.pkl", "wb") as f:
+        pickle.dump(leaves_embeddings, f)
     leaves_embeddings = project(leaves_embeddings).detach().cpu().numpy()
+    with open("leave_embeddings.pkl", "wb") as f:
+        pickle.dump(leaves_embeddings, f)
     print(leaves_embeddings.shape)
     fig = plt.figure(figsize=(5, 5))
     ax = fig.add_subplot(111)
