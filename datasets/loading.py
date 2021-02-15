@@ -16,7 +16,7 @@ UCI_DATASETS = [
 def load_custom_data():
     x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "feature_matrix.pkl"), "rb"))
     x = np.array(x, dtype=float)
-    y = np.array([_ for _ in range(x.shape(0))])
+    y = np.array([_ for _ in range(x.shape[0])])
     mean = x.mean(0)
     mean = mean + 0.00000001
     std = x.std(0) + 0.00000001
