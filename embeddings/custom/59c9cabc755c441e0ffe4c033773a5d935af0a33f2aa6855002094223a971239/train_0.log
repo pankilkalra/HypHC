@@ -1,0 +1,119 @@
+2021-02-15 08:20:54,149 INFO Using seed 0.
+2021-02-15 08:20:54,149 INFO Using double precision.
+2021-02-15 08:20:54,386 INFO Generating triples.
+2021-02-15 08:20:54,451 INFO Total of 1000000 triples
+2021-02-15 08:20:56,161 INFO Start training
+2021-02-15 08:21:48,315 INFO 	 Epoch 0 | average train loss: 1.303605
+2021-02-15 08:21:48,495 INFO Dasgupta's cost:	424420581.7491
+2021-02-15 08:22:41,591 INFO 	 Epoch 1 | average train loss: 1.270467
+2021-02-15 08:22:41,742 INFO Dasgupta's cost:	388989560.6389
+2021-02-15 08:23:35,196 INFO 	 Epoch 2 | average train loss: 1.163153
+2021-02-15 08:23:35,390 INFO Dasgupta's cost:	359840544.2857
+2021-02-15 08:24:28,400 INFO 	 Epoch 3 | average train loss: 1.098664
+2021-02-15 08:24:28,554 INFO Dasgupta's cost:	351956683.6272
+2021-02-15 08:25:21,431 INFO 	 Epoch 4 | average train loss: 1.072753
+2021-02-15 08:25:21,578 INFO Dasgupta's cost:	349409143.1330
+2021-02-15 08:26:14,783 INFO 	 Epoch 5 | average train loss: 1.058791
+2021-02-15 08:26:14,933 INFO Dasgupta's cost:	349011338.1110
+2021-02-15 08:27:08,698 INFO 	 Epoch 6 | average train loss: 1.052394
+2021-02-15 08:27:08,872 INFO Dasgupta's cost:	348940566.8416
+2021-02-15 08:28:02,693 INFO 	 Epoch 7 | average train loss: 1.048404
+2021-02-15 08:28:02,852 INFO Dasgupta's cost:	347704239.0786
+2021-02-15 08:28:56,443 INFO 	 Epoch 8 | average train loss: 1.044456
+2021-02-15 08:28:56,593 INFO Dasgupta's cost:	348315473.4351
+2021-02-15 08:29:49,772 INFO 	 Epoch 9 | average train loss: 1.041656
+2021-02-15 08:29:49,918 INFO Dasgupta's cost:	347086280.4568
+2021-02-15 08:29:49,919 INFO Annealing temperature to: 0.025
+2021-02-15 08:29:49,919 INFO Annealing learning rate to: 5e-05
+2021-02-15 08:30:43,538 INFO 	 Epoch 10 | average train loss: 1.038760
+2021-02-15 08:30:43,692 INFO Dasgupta's cost:	346561809.1303
+2021-02-15 08:31:37,073 INFO 	 Epoch 11 | average train loss: 1.038014
+2021-02-15 08:31:37,239 INFO Dasgupta's cost:	346846150.0281
+2021-02-15 08:32:30,571 INFO 	 Epoch 12 | average train loss: 1.037336
+2021-02-15 08:32:30,732 INFO Dasgupta's cost:	346544435.0893
+2021-02-15 08:33:24,320 INFO 	 Epoch 13 | average train loss: 1.036741
+2021-02-15 08:33:24,475 INFO Dasgupta's cost:	346502110.4272
+2021-02-15 08:34:18,093 INFO 	 Epoch 14 | average train loss: 1.036250
+2021-02-15 08:34:18,251 INFO Dasgupta's cost:	346809855.3743
+2021-02-15 08:35:11,505 INFO 	 Epoch 15 | average train loss: 1.035781
+2021-02-15 08:35:11,659 INFO Dasgupta's cost:	346660711.8262
+2021-02-15 08:36:05,080 INFO 	 Epoch 16 | average train loss: 1.035295
+2021-02-15 08:36:05,237 INFO Dasgupta's cost:	346616345.5432
+2021-02-15 08:36:59,022 INFO 	 Epoch 17 | average train loss: 1.035065
+2021-02-15 08:36:59,206 INFO Dasgupta's cost:	346756427.0240
+2021-02-15 08:37:52,750 INFO 	 Epoch 18 | average train loss: 1.034653
+2021-02-15 08:37:52,902 INFO Dasgupta's cost:	346718332.1959
+2021-02-15 08:38:46,324 INFO 	 Epoch 19 | average train loss: 1.034364
+2021-02-15 08:38:46,479 INFO Dasgupta's cost:	346628098.3755
+2021-02-15 08:38:46,479 INFO Annealing temperature to: 0.0125
+2021-02-15 08:38:46,479 INFO Annealing learning rate to: 2.5e-05
+2021-02-15 08:39:39,513 INFO 	 Epoch 20 | average train loss: 1.033738
+2021-02-15 08:39:39,662 INFO Dasgupta's cost:	346727997.7515
+2021-02-15 08:40:33,261 INFO 	 Epoch 21 | average train loss: 1.033578
+2021-02-15 08:40:33,439 INFO Dasgupta's cost:	346569685.5755
+2021-02-15 08:41:26,810 INFO 	 Epoch 22 | average train loss: 1.033332
+2021-02-15 08:41:26,957 INFO Dasgupta's cost:	346236807.5197
+2021-02-15 08:42:20,546 INFO 	 Epoch 23 | average train loss: 1.033242
+2021-02-15 08:42:20,704 INFO Dasgupta's cost:	346325694.9721
+2021-02-15 08:43:14,370 INFO 	 Epoch 24 | average train loss: 1.033135
+2021-02-15 08:43:14,526 INFO Dasgupta's cost:	346571789.7360
+2021-02-15 08:44:08,343 INFO 	 Epoch 25 | average train loss: 1.032978
+2021-02-15 08:44:08,521 INFO Dasgupta's cost:	345772353.9558
+2021-02-15 08:45:01,937 INFO 	 Epoch 26 | average train loss: 1.032829
+2021-02-15 08:45:02,100 INFO Dasgupta's cost:	346560135.5480
+2021-02-15 08:45:55,701 INFO 	 Epoch 27 | average train loss: 1.032811
+2021-02-15 08:45:55,855 INFO Dasgupta's cost:	346473553.5736
+2021-02-15 08:46:49,431 INFO 	 Epoch 28 | average train loss: 1.032618
+2021-02-15 08:46:49,583 INFO Dasgupta's cost:	345745076.6678
+2021-02-15 08:47:43,415 INFO 	 Epoch 29 | average train loss: 1.032693
+2021-02-15 08:47:43,560 INFO Dasgupta's cost:	350411655.9275
+2021-02-15 08:47:43,560 INFO Annealing temperature to: 0.00625
+2021-02-15 08:47:43,560 INFO Annealing learning rate to: 1.25e-05
+2021-02-15 08:48:37,049 INFO 	 Epoch 30 | average train loss: 1.032374
+2021-02-15 08:48:37,204 INFO Dasgupta's cost:	345882197.8926
+2021-02-15 08:49:30,418 INFO 	 Epoch 31 | average train loss: 1.032314
+2021-02-15 08:49:30,575 INFO Dasgupta's cost:	345531554.6169
+2021-02-15 08:50:23,922 INFO 	 Epoch 32 | average train loss: 1.032172
+2021-02-15 08:50:24,074 INFO Dasgupta's cost:	349295165.1112
+2021-02-15 08:51:17,727 INFO 	 Epoch 33 | average train loss: 1.032253
+2021-02-15 08:51:17,886 INFO Dasgupta's cost:	346122525.0523
+2021-02-15 08:52:11,216 INFO 	 Epoch 34 | average train loss: 1.032135
+2021-02-15 08:52:11,372 INFO Dasgupta's cost:	350277632.1953
+2021-02-15 08:53:04,662 INFO 	 Epoch 35 | average train loss: 1.032070
+2021-02-15 08:53:04,823 INFO Dasgupta's cost:	345725537.9514
+2021-02-15 08:53:58,540 INFO 	 Epoch 36 | average train loss: 1.031948
+2021-02-15 08:53:58,696 INFO Dasgupta's cost:	349601376.7227
+2021-02-15 08:54:52,368 INFO 	 Epoch 37 | average train loss: 1.032104
+2021-02-15 08:54:52,518 INFO Dasgupta's cost:	350258583.7349
+2021-02-15 08:55:45,821 INFO 	 Epoch 38 | average train loss: 1.032036
+2021-02-15 08:55:45,970 INFO Dasgupta's cost:	346156954.9659
+2021-02-15 08:56:39,109 INFO 	 Epoch 39 | average train loss: 1.032024
+2021-02-15 08:56:39,270 INFO Dasgupta's cost:	349841303.1484
+2021-02-15 08:56:39,271 INFO Annealing temperature to: 0.003125
+2021-02-15 08:56:39,271 INFO Annealing learning rate to: 6.25e-06
+2021-02-15 08:57:32,871 INFO 	 Epoch 40 | average train loss: 1.031826
+2021-02-15 08:57:33,051 INFO Dasgupta's cost:	345533836.1160
+2021-02-15 08:58:26,274 INFO 	 Epoch 41 | average train loss: 1.031792
+2021-02-15 08:58:26,442 INFO Dasgupta's cost:	346515484.2620
+2021-02-15 08:59:20,068 INFO 	 Epoch 42 | average train loss: 1.031760
+2021-02-15 08:59:20,238 INFO Dasgupta's cost:	345853304.3267
+2021-02-15 09:00:13,185 INFO 	 Epoch 43 | average train loss: 1.031664
+2021-02-15 09:00:13,337 INFO Dasgupta's cost:	347328585.7207
+2021-02-15 09:01:06,839 INFO 	 Epoch 44 | average train loss: 1.031665
+2021-02-15 09:01:07,015 INFO Dasgupta's cost:	350438128.8195
+2021-02-15 09:02:00,152 INFO 	 Epoch 45 | average train loss: 1.031684
+2021-02-15 09:02:00,303 INFO Dasgupta's cost:	347359295.9794
+2021-02-15 09:02:53,425 INFO 	 Epoch 46 | average train loss: 1.031755
+2021-02-15 09:02:53,575 INFO Dasgupta's cost:	350233568.0774
+2021-02-15 09:03:47,075 INFO 	 Epoch 47 | average train loss: 1.031583
+2021-02-15 09:03:47,223 INFO Dasgupta's cost:	350142386.6116
+2021-02-15 09:04:40,292 INFO 	 Epoch 48 | average train loss: 1.031688
+2021-02-15 09:04:40,465 INFO Dasgupta's cost:	349989649.9895
+2021-02-15 09:05:33,674 INFO 	 Epoch 49 | average train loss: 1.031448
+2021-02-15 09:05:33,829 INFO Dasgupta's cost:	346558402.9511
+2021-02-15 09:05:33,829 INFO Annealing temperature to: 0.0015625
+2021-02-15 09:05:33,829 INFO Annealing learning rate to: 3.125e-06
+2021-02-15 09:05:33,829 INFO Optimization finished.
+2021-02-15 09:05:33,830 INFO Saving best model at /content/HypHC/embeddings/custom/59c9cabc755c441e0ffe4c033773a5d935af0a33f2aa6855002094223a971239/model_0.pkl
+2021-02-15 09:05:33,835 INFO Decoding embeddings.
+2021-02-15 09:05:33,981 INFO Dasgupta's cost:	345531554.6169

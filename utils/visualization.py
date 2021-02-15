@@ -85,6 +85,7 @@ def plot_tree_from_leaves(ax, tree, leaves_embeddings, labels, color_seed=1234):
     circle = plt.Circle((0, 0), 1.0, color='r', alpha=0.1)
     ax.add_artist(circle)
     n = leaves_embeddings.shape[0]
+    print(leaves_embeddings.shape)
     embeddings = complete_tree(tree, leaves_embeddings)
     colors = get_colors(labels, color_seed)
     ax.scatter(embeddings[:n, 0], embeddings[:n, 1], c=colors, s=50, alpha=0.6)
