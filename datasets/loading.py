@@ -21,7 +21,6 @@ def load_custom_data():
     mean = x.mean(0)
     mean = mean + 0.00000001
     std = x.std(0)
-    print(mean, std)
     x = (x - mean) / std
     return x, y
 
@@ -44,10 +43,10 @@ def load_data(dataset, normalize=False):
             x, y = load_custom_data()
     else:
         raise NotImplementedError("Unknown dataset {}.".format(dataset))
-    print(x.shape)
-    print(y.shape)
-    print(x)
-    print(y)
+    print("X shape: ", x.shape)
+    print("Y shape: ", y.shape)
+    # print(x)
+    # print(y)
     if normalize:
         x = x / np.linalg.norm(x, axis=1, keepdims=True)
     x0 = x[None, :, :]
@@ -73,7 +72,6 @@ def load_uci_data(dataset):
         "zoo": (1, 17, -1),
         "iris": (0, 4, -1),
         "glass": (1, 10, -1),
-        "custom": ()
     }
     data_path = os.path.join(os.environ["DATAPATH"], dataset, "{}.data".format(dataset))
     classes = {}
@@ -89,12 +87,7 @@ def load_uci_data(dataset):
                     classes[label] = class_counter
                     class_counter += 1
                 y.append(classes[label])
-    with open("a.json", "w+") as f:
-        json.dump({
-            "x": x,
-            "y": y
-        }, f)
-    y = np.array(y, dtype=int)
+    y = np.zeros((len(y), 1), dtype=int)
     x = np.array(x, dtype=float)
     print("X shape", x.shape)
     print("Y shape", y.shape)
