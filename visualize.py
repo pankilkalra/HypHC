@@ -35,7 +35,9 @@ if __name__ == "__main__":
     # decode tree
     tree = model.decode_tree(fast_decoding=True)
     leaves_embeddings = model.normalize_embeddings(model.embeddings.weight.data)
+    print(leaves_embeddings.shape)
     leaves_embeddings = project(leaves_embeddings).detach().cpu().numpy()
+    print(leaves_embeddings.shape)
     fig = plt.figure(figsize=(5, 5))
     ax = fig.add_subplot(111)
     ax = plot_tree_from_leaves(ax, tree, leaves_embeddings, labels=y_true)
