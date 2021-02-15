@@ -16,11 +16,10 @@ UCI_DATASETS = [
 def load_custom_data():
     x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "feature_matrix.pkl"), "rb"))
     x = np.array(x, dtype=float)
-    # y = np.array([i % 5 for i in range(x.shape[0])], dtype=int)
-    y = np.zeros((x.shape[0], 1))
+    y = np.array([_ for _ in range(x.shape(0))])
     mean = x.mean(0)
     mean = mean + 0.00000001
-    std = x.std(0) + 0.0000001
+    std = x.std(0) + 0.00000001
     x = (x - mean) / std
     return x, y
 
@@ -61,7 +60,6 @@ def load_data(dataset, normalize=False):
 
 def load_uci_data(dataset):
     """Loads data from UCI repository.
-
     @param dataset: UCI dataset name
     @return: feature vectors, labels
     @rtype: Tuple[np.array, np.array]
