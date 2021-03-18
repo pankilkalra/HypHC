@@ -12,5 +12,5 @@ python train.py --dataset custom \
                 --anneal_factor 0.5 \
                 --init_size 0.05 \
                 --num_samples 1000000 \
-                --rank 5 \
+                --rank 20 \
                 --seed 0
