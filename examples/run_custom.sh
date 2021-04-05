@@ -4,7 +4,7 @@ python train.py --dataset custom \
                 --epochs 50 \
                 --batch_size 512 \
                 --learning_rate 1e-3 \
-                --temperature 5e-2 \
+                --temperature 1e-2 \
                 --eval_every 1 \
                 --patience 40 \
                 --optimizer RAdam \
