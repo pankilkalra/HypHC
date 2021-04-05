@@ -14,7 +14,7 @@ UCI_DATASETS = [
 
 
 def load_custom_data():
-    x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "standardised_train_features.pkl"), "rb"))
+    x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "train_features.pkl"), "rb"))
     x = np.array(x, dtype=float)[0:2000]
     y = np.array([_ for _ in range(x.shape[0])])[0:2000]
     mean = x.mean(0)
