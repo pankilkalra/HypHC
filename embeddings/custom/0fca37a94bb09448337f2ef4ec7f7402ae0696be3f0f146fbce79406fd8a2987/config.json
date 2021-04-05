@@ -1,1 +1,0 @@
-{"seed": 0, "epochs": 50, "batch_size": 512, "learning_rate": 0.0001, "eval_every": 1, "patience": 40, "optimizer": "RAdam", "save": 1, "fast_decoding": 1, "num_samples": 2000000, "dtype": "double", "rank": 5, "temperature": 0.05, "init_size": 0.05, "anneal_every": 10, "anneal_factor": 0.5, "max_scale": 0.999, "dataset": "custom"}
