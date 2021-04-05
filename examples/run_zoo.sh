@@ -4,7 +4,7 @@ python train.py --dataset zoo \
                 --epochs 50 \
                 --batch_size 256 \
                 --learning_rate 1e-4 \
-                --temperature 5e-2 \
+                --temperature 1e-2 \
                 --eval_every 1 \
                 --patience 30 \
                 --optimizer RAdam \
