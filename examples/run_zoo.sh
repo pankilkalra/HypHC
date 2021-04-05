@@ -3,7 +3,7 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 python train.py --dataset zoo \
                 --epochs 50 \
                 --batch_size 256 \
-                --learning_rate 1e-3 \
+                --learning_rate 1e-4 \
                 --temperature 1e-1 \
                 --eval_every 1 \
                 --patience 30 \
