@@ -35,6 +35,15 @@ if __name__ == "__main__":
 
     # decode tree
     tree = model.decode_tree(fast_decoding=True)
+    
+    f = open("final_tree.pkl", "wb")
+    pickle.dump(tree, f)
+    f.close()
+    
+    f = open("similarities.pkl", "wb")
+    pickle.dump(similarities, f)
+    f.close()
+    
     leaves_embeddings = model.normalize_embeddings(model.embeddings.weight.data)
     print(leaves_embeddings.shape)
     with open("leave_embeddings.pkl", "wb") as f:
