@@ -5,6 +5,8 @@ import os
 import numpy as np
 import pickle
 
+from sklearn.preprocessing import StandardScaler
+
 UCI_DATASETS = [
     "glass",
     "zoo",
@@ -24,9 +26,8 @@ def load_custom_data():
     return x, y
 
 
-def load_data(dataset, normalize=False):
+def load_data(dataset, normalize=True):
     """Load dataset.
-
     @param dataset: dataset name
     @type dataset: str
     @param normalize: whether to normalize features or not
@@ -34,22 +35,23 @@ def load_data(dataset, normalize=False):
     @return: feature vectors, labels, and pairwise similarities computed with cosine similarity
     @rtype: Tuple[np.array, np.array, np.array]
     """
-    normalize = False
     if dataset in UCI_DATASETS:
-        if dataset != "custom":
-            x, y = load_uci_data(dataset)
-        else:
-            x, y = load_custom_data()
+        x, y = load_uci_data(dataset)
     else:
-        raise NotImplementedError("Unknown dataset {}.".format(dataset))
-    print("X shape: ", x.shape)
-    print("Y shape: ", y.shape)
-    # print(x)
-    # print(y)
+        x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "train_features.pkl"), "rb"))
+        y = [0]*len(x)
+        x = np.array(x, dtype=float)
+        y = np.array(y, dtype=int)
+        
+    print("x.shape:", x.shape)
+    print("before:", x)
     if normalize:
         x = x / np.linalg.norm(x, axis=1, keepdims=True)
+    print("after:", x)
     x0 = x[None, :, :]
     x1 = x[:, None, :]
+#     print("x0.shape:", x0.shape)
+#     print("x1.shape:", x1.shape) 
     cos = (x0 * x1).sum(-1)
     similarities = 0.5 * (1 + cos)
     similarities = np.triu(similarities) + np.triu(similarities).T
