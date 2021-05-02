@@ -27,9 +27,7 @@ def load_data(dataset, normalize=True):
     if dataset in UCI_DATASETS:
         x, y = load_uci_data(dataset)
     else:
-        f = open('feature_matrix5/train_features.pkl', 'rb')
-        x = pickle.load(f)
-        f.close()
+        x = pickle.load(open(os.path.join(os.environ["HHC_HOME"], "train_features.pkl"), "rb"))
         y = [0]*len(x)
         x = np.array(x, dtype=float)
         y = np.array(y, dtype=int)
