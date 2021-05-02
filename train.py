@@ -17,6 +17,7 @@ from datasets.loading import load_data
 from model.hyphc import HypHC
 from utils.metrics import dasgupta_cost
 from utils.training import add_flags_from_config, get_savedir
+import pickle
 
 
 def train(args):
@@ -56,6 +57,11 @@ def train(args):
 
     # create dataset
     x, y_true, similarities = load_data(args.dataset)
+    
+    f = open("similarities_bf.pkl", "wb")
+    pickle.dump(similarities, f)
+    f.close()
+    
     dataset = HCDataset(x, y_true, similarities, num_samples=args.num_samples)
     dataloader = data.DataLoader(dataset, batch_size=args.batch_size, shuffle=True, num_workers=8, pin_memory=True)
 
@@ -129,6 +135,12 @@ def train(args):
     logging.info("Decoding embeddings.")
     tree = model.decode_tree(fast_decoding=args.fast_decoding)
     cost = dasgupta_cost(tree, similarities)
+    
+    f = open("similarities_af.pkl", "wb")
+    pickle.dump(similarities, f)
+    f.close()
+    
+    
     logging.info("{}:\t{:.4f}".format("Dasgupta's cost", cost))
 
     if args.save:
