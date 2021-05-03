@@ -69,10 +69,8 @@ class HypHC(nn.Module):
         leaves_embeddings = project(leaves_embeddings).detach().cpu()
         sim_fn = lambda x, y: torch.sum(x * y, dim=-1)
         if fast_decoding:
-            print("fast")
             parents = nn_merge_uf_fast_np(leaves_embeddings, S=sim_fn, partition_ratio=1.2)
         else:
-            print("slow")
             parents = sl_from_embeddings(leaves_embeddings, sim_fn)
         tree = nx.DiGraph()
         for i, j in enumerate(parents[:-1]):
