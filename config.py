@@ -10,7 +10,7 @@ config_args = {
     "patience": 20,
     "optimizer": "RAdam",
     "save": 1,
-    "fast_decoding": 1,
+    "fast_decoding": 0,
     "num_samples": -1,
 
     # model
